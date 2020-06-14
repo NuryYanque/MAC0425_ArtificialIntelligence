@@ -87,7 +87,59 @@ class BlackjackMDP(util.MDP):
            don't include that state in the list returned by succAndProbReward.
         """
         # BEGIN_YOUR_CODE
+        # print("succAndProbReward method")
+        print("state: ", state)
+        total, spied_card_index, deck = state
+        succ_prob_reward = []
+        new_deck = list(deck)
+        if action == 'Espiar':
+            if spied_card_index is None:
+                for index in range(0, len(deck)):
+                    new_state = (total, index, deck)
+                    prob = 1/3
+                    reward = -self.custo_espiada
+                    succ_prob_reward.append((new_state, prob, reward))
+        if action == 'Pegar':
+            if spied_card_index is not None:
+                prob = 1
+                reward = 0
+                total = total + self.valores_cartas[spied_card_index]
+                if total <= self.limiar:
+                    new_deck[spied_card_index] = new_deck[spied_card_index] - 1
+                    new_state = (total, None, tuple(new_deck))
+                    succ_prob_reward.append((new_state, prob, reward))
+                else:
+                    new_state = (total, None, None)
+                    succ_prob_reward.append((new_state, prob, reward))
+            else:
+                for index in range(0, len(deck)):
+                    if deck[index] > 0:
+                        total += self.valores_cartas[index]
+                        reward = 0
+                        if total <= self.limiar:
+                            new_deck[index] -= 1
+                            if sum(new_deck) != 0:
+                                new_state = (total, None, tuple(new_deck))
+                                prob = 1/3
+                                succ_prob_reward.append((new_state, prob, reward))
+                            else:
+                                new_state = (total, None, None)
+                                prob = 1
+                                reward = total
+                                succ_prob_reward.append((new_state, prob, reward))
+                        else:
+                            new_state = (total, None, None)
+                            prob = 1
+                            succ_prob_reward.append((new_state, prob, reward))
+        if action == 'Sair':
+            if total <= self.limiar:
+                new_state = (total, None, None)
+                prob = 0
+                reward = total
+                succ_prob_reward.append((new_state, prob, reward))
         
+        return succ_prob_reward
+            
         # raise Exception("Not implemented yet")
         # END_YOUR_CODE
 
@@ -128,6 +180,7 @@ class ValueIteration(util.MDPAlgorithm):
             for state in mdp.states:
                 pi[state] = max((computeQ(mdp, V, state, action), action) for action in mdp.actions(state))[1]
             return pi
+            
         V = defaultdict(float)  # state -> value of state
         # Implement the main loop of Asynchronous Value Iteration Here:
         # BEGIN_YOUR_CODE
