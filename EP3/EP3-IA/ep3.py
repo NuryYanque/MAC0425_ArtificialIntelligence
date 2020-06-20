@@ -88,56 +88,70 @@ class BlackjackMDP(util.MDP):
         """
         # BEGIN_YOUR_CODE
         # print("succAndProbReward method")
-        print("state: ", state)
         total, spied_card_index, deck = state
+        if deck is None:
+            return []
         succ_prob_reward = []
         new_deck = list(deck)
         if action == 'Espiar':
-            if spied_card_index is None:
-                for index in range(0, len(deck)):
+            if spied_card_index is not None:
+                return [] 
+            sum_cards_deck = sum(deck)
+            for index in range(0, len(self.valores_cartas)):
+                if deck[index] > 0:
                     new_state = (total, index, deck)
-                    prob = 1/3
+                    prob = float(deck[index]) / sum_cards_deck
                     reward = -self.custo_espiada
                     succ_prob_reward.append((new_state, prob, reward))
+
         if action == 'Pegar':
             if spied_card_index is not None:
-                prob = 1
-                reward = 0
-                total = total + self.valores_cartas[spied_card_index]
-                if total <= self.limiar:
-                    new_deck[spied_card_index] = new_deck[spied_card_index] - 1
-                    new_state = (total, None, tuple(new_deck))
-                    succ_prob_reward.append((new_state, prob, reward))
-                else:
-                    new_state = (total, None, None)
-                    succ_prob_reward.append((new_state, prob, reward))
-            else:
-                for index in range(0, len(deck)):
-                    if deck[index] > 0:
-                        total += self.valores_cartas[index]
-                        reward = 0
-                        if total <= self.limiar:
-                            new_deck[index] -= 1
-                            if sum(new_deck) != 0:
-                                new_state = (total, None, tuple(new_deck))
-                                prob = 1/3
-                                succ_prob_reward.append((new_state, prob, reward))
-                            else:
-                                new_state = (total, None, None)
-                                prob = 1
-                                reward = total
-                                succ_prob_reward.append((new_state, prob, reward))
-                        else:
-                            new_state = (total, None, None)
-                            prob = 1
-                            succ_prob_reward.append((new_state, prob, reward))
-        if action == 'Sair':
-            if total <= self.limiar:
-                new_state = (total, None, None)
-                prob = 0
-                reward = total
-                succ_prob_reward.append((new_state, prob, reward))
+                new_total = total + self.valores_cartas[spied_card_index]
+                if new_total > self.limiar:
+                    new_state = (new_total, None, None)
+                    return [((new_state), 1.0, 0)]
+                new_deck[spied_card_index] -= 1
+                if sum(new_deck) == 0:
+                    new_state = (new_total, None, None)
+                    reward = new_total
+                else: 
+                    new_state = (new_total, None, tuple(new_deck))
+                    reward = 0
+                return [(new_state, 1.0, reward)]
+                
         
+            for index in range(0, len(self.valores_cartas)):
+                if deck[index] > 0:
+                    new_total = total + self.valores_cartas[index]
+                    reward = 0
+                    if new_total > self.limiar:
+                        new_state = (new_total, None, None)
+                        reward = 0
+                        prob = float(deck[index]) / sum(deck)
+                        succ_prob_reward.append((new_state, prob, reward))
+                    else: #new_total <= self.limiar:
+                        new_deck[index] -= 1
+                        if sum(new_deck) == 0:
+                            new_state = (new_total, None, None)
+                            prob = float(deck[index]) / sum(deck)
+                            reward = new_total
+                            succ_prob_reward.append((new_state, prob, reward))
+                        
+                        else: #sum(new_deck) > 0:
+                            new_state = (new_total, None, tuple(new_deck))
+                            prob = float(deck[index]) / sum(deck)
+                            reward = 0
+                            succ_prob_reward.append((new_state, 
+                            prob, reward))
+            # return succ_prob_reward
+
+        if action == 'Sair':
+            new_state = (total, None, None)
+            prob = 1.0
+            reward = total
+            
+            return [(new_state, prob, reward)]
+            
         return succ_prob_reward
             
         # raise Exception("Not implemented yet")
@@ -168,7 +182,9 @@ class ValueIteration(util.MDPAlgorithm):
         all of the values change by less than epsilon.
         The ValueIteration class is a subclass of util.MDPAlgorithm (see util.py).
         """
+        print("========= Solve")
         mdp.computeStates()
+        print("mdp.computeStates(): ", mdp.states)
         def computeQ(mdp, V, state, action):
             # Return Q(state, action) based on V(state).
             return sum(prob * (reward + mdp.discount() * V[newState]) \
@@ -184,7 +200,20 @@ class ValueIteration(util.MDPAlgorithm):
         V = defaultdict(float)  # state -> value of state
         # Implement the main loop of Asynchronous Value Iteration Here:
         # BEGIN_YOUR_CODE
-        raise Exception("Not implemented yet")
+        for s in mdp.states:
+            V[s] = 0.0
+        
+        delta = 1000000
+        
+        while delta > epsilon:
+            delta = 0
+            for s in mdp.states:
+                v = V[s]
+                V[s] = max([computeQ(mdp, V, s, a) for a in mdp.actions(s)])
+                delta = max(delta, abs(v-V[s]))
+
+        print("V:", V)             
+        # raise Exception("Not implemented yet")
         # END_YOUR_CODE
 
         # Extract the optimal policy now
