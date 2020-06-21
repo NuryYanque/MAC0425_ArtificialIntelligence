@@ -1,23 +1,24 @@
 ******************************
 Code quality:
 ------------------------------
-Code grade: 6.74/10.0	(Code with reasonably quality)
+Code grade: 6.79/10.0	(Code with reasonably quality)
 ------------------------------
 Standards deviation:
-statement:	132
+statement:	140
 info:	0
-convention:	40
+convention:	41
 refactor:	2
-warning:	1
+warning:	2
 error:	0
 fatal:	0
 ------------------------------
 Deviation description:
-trailing-whitespace:	13
+trailing-whitespace:	14
 bad-continuation:	1
 line-too-long:	2
 too-many-branches:	1
 invalid-name:	24
+redefined-outer-name:	1
 arguments-differ:	1
 too-few-public-methods:	1
 ******************************
@@ -34,9 +35,744 @@ Test concluded without errors
 Grade in the Test02-01: 10.0/10.0
 ------------------------------
 Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
 Python error: Not implemented yet
 Test did not conclude
 Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	0/1 correct
+Test concluded without errors
+Grade in the Test02-02: 0.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+Python error: Not implemented yet
+Test did not conclude
+Receiving grade 0.0 in the test
+Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.79/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	140
+info:	0
+convention:	41
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	14
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	24
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	1/1 correct
+Test concluded without errors
 Grade in the Test02-02: 10.0/10.0
 ------------------------------
 Part03-01 QLearningAlgorithm:
@@ -44,3 +780,187 @@ Python error: Not implemented yet
 Test did not conclude
 Receiving grade 0.0 in the test
 Grade in the Test03-01: 0.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.62/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	145
+info:	0
+convention:	45
+refactor:	2
+warning:	2
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	15
+bad-continuation:	1
+line-too-long:	2
+too-many-branches:	1
+invalid-name:	27
+redefined-outer-name:	1
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	1/1 correct
+Test concluded without errors
+Grade in the Test02-02: 10.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+QLearningAlgorithm:	4/4 correct
+Test concluded without errors
+Grade in the Test03-01: 10.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.54/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	153
+info:	0
+convention:	47
+refactor:	2
+warning:	4
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	15
+bad-continuation:	1
+line-too-long:	2
+bad-whitespace:	2
+redefined-outer-name:	3
+too-many-branches:	1
+invalid-name:	27
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	1/1 correct
+Test concluded without errors
+Grade in the Test02-02: 10.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+QLearningAlgorithm:	4/4 correct
+Test concluded without errors
+Grade in the Test03-01: 10.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.54/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	153
+info:	0
+convention:	47
+refactor:	2
+warning:	4
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	15
+bad-continuation:	1
+line-too-long:	2
+bad-whitespace:	2
+redefined-outer-name:	3
+too-many-branches:	1
+invalid-name:	27
+arguments-differ:	1
+too-few-public-methods:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	1/1 correct
+Test concluded without errors
+Grade in the Test02-02: 10.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+QLearningAlgorithm:	4/4 correct
+Test concluded without errors
+Grade in the Test03-01: 10.0/10.0
+******************************
+Code quality:
+------------------------------
+Code grade: 6.35/10.0	(Code with reasonably quality)
+------------------------------
+Standards deviation:
+statement:	156
+info:	0
+convention:	50
+refactor:	2
+warning:	5
+error:	0
+fatal:	0
+------------------------------
+Deviation description:
+trailing-whitespace:	17
+bad-continuation:	1
+line-too-long:	2
+bad-whitespace:	2
+redefined-outer-name:	3
+too-many-branches:	1
+invalid-name:	28
+arguments-differ:	1
+too-few-public-methods:	1
+unused-variable:	1
+******************************
+Tests:
+------------------------------
+Parte01-01 Modeling MDPs:
+Modeling MDPs:	2/2 correct
+Test concluded without errors
+Grade in the Test01: 10.0/10.0
+------------------------------
+Part02-01 ValueIteration::
+ValueIteration:	1/1 correct
+Test concluded without errors
+Grade in the Test02-01: 10.0/10.0
+------------------------------
+Part02-02 Peeking MDP:
+Peeking MDP:	1/1 correct
+Test concluded without errors
+Grade in the Test02-02: 10.0/10.0
+------------------------------
+Part03-01 QLearningAlgorithm:
+QLearningAlgorithm:	4/4 correct
+Test concluded without errors
+Grade in the Test03-01: 10.0/10.0

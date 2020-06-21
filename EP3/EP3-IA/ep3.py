@@ -31,6 +31,7 @@ import math
 import random
 from collections import defaultdict
 import util
+from util import simulate
 
 
 # **********************************************************
@@ -182,9 +183,7 @@ class ValueIteration(util.MDPAlgorithm):
         all of the values change by less than epsilon.
         The ValueIteration class is a subclass of util.MDPAlgorithm (see util.py).
         """
-        print("========= Solve")
         mdp.computeStates()
-        print("mdp.computeStates(): ", mdp.states)
         def computeQ(mdp, V, state, action):
             # Return Q(state, action) based on V(state).
             return sum(prob * (reward + mdp.discount() * V[newState]) \
@@ -210,23 +209,33 @@ class ValueIteration(util.MDPAlgorithm):
             for s in mdp.states:
                 v = V[s]
                 V[s] = max([computeQ(mdp, V, s, a) for a in mdp.actions(s)])
-                delta = max(delta, abs(v-V[s]))
-
-        print("V:", V)             
+                delta = max(delta, abs(v-V[s]))             
+        
         # raise Exception("Not implemented yet")
         # END_YOUR_CODE
 
         # Extract the optimal policy now
         pi = computeOptimalPolicy(mdp, V)
+
         # print("ValueIteration: %d iterations" % numIters)
         self.pi = pi
         self.V = V
 
-# First MDP
+print("Politica ótimo para o MDP1 com Value Iteration: ")
 MDP1 = BlackjackMDP(valores_cartas=[1, 5], multiplicidade=2, limiar=10, custo_espiada=1)
+viMDP1 = ValueIteration()
+viMDP1.solve(MDP1)
+for s, a in viMDP1.pi.items():
+    print(s, a)
 
-# Second MDP
+print()
+
+print("Politica ótimo para o MDP2 com Value Iteration: ")
 MDP2 = BlackjackMDP(valores_cartas=[1, 5], multiplicidade=2, limiar=15, custo_espiada=1)
+viMDP2 = ValueIteration()
+viMDP2.solve(MDP2)
+for s, a in viMDP2.pi.items():
+    print(s, a)
 
 def geraMDPxereta():
     """
@@ -234,7 +243,7 @@ def geraMDPxereta():
     optimal action for at least 10% of the states.
     """
     # BEGIN_YOUR_CODE
-    raise Exception("Not implemented yet")
+    return BlackjackMDP(valores_cartas=[1, 2, 3, 18], multiplicidade=3, limiar=20, custo_espiada=1)
     # END_YOUR_CODE
 
 
@@ -294,7 +303,14 @@ class QLearningAlgorithm(util.RLAlgorithm):
          HINT: Remember to check if s is a terminal state and s' None.
         """
         # BEGIN_YOUR_CODE
-        raise Exception("Not implemented yet")
+        # approximate Q-Learning
+        if newState is None:
+            return
+        maxQ = max([self.getQ(newState, newAction) for newAction in self.actions(newState)])
+        adjust = self.getStepSize() * (reward + self.discount * maxQ - self.getQ(state, action))
+        for f, v in self.featureExtractor(state, action):
+            self.weights[f] += adjust * v        
+        # raise Exception("Not implemented yet")
         # END_YOUR_CODE
 
 def identityFeatureExtractor(state, action):
@@ -309,6 +325,38 @@ def identityFeatureExtractor(state, action):
 # Large test case
 largeMDP = BlackjackMDP(valores_cartas=[1, 3, 5, 8, 10], multiplicidade=3, limiar=40, custo_espiada=1)
 
+# Comparar Q-learning com Value Iteration
+def simulate_compare_QL_VI(mdp, featureExtractor):
+
+    valIter = ValueIteration()
+    valIter.solve(mdp)
+    pi_valIter = valIter.pi
+
+    RL = QLearningAlgorithm(mdp.actions, mdp.discount(), featureExtractor)
+    # 30 mil eposidios
+    simulate(mdp, RL, numTrials=30000)
+    RL.explorationProb = 0
+    pi_RL = {}
+    count_coincidences = 0
+    for state in mdp.states:
+        pi_RL[state] = RL.getAction(state)
+        if pi_RL[state]  == pi_valIter[state]:
+            count_coincidences += 1
+    ratio = 100 * count_coincidences/len(mdp.states)
+    print("Porcentagem de estados para as quais as ações coindicem: ", ratio)
+
+# Comparação com o MDP1
+simulate_compare_QL_VI(MDP1, identityFeatureExtractor)
+# RESULTADO
+# Porcentagem de estados para as quais as ações coindicem:  
+# 73.53
+
+# Comparação com o MDP2
+simulate_compare_QL_VI(MDP2, identityFeatureExtractor)
+# RESULTADO
+# Porcentagem de estados para as quais as ações coindicem:  
+# 44.44
+
 # **********************************************************
 # **        PART 03-01 Features for Q-Learning             **
 # **********************************************************
@@ -319,5 +367,26 @@ def blackjackFeatureExtractor(state, action):
     (See identityFeatureExtractor() above for a simple example.)
     """
     # BEGIN_YOUR_CODE
-    raise Exception("Not implemented yet")
+    total, spied_card_index, deck = state
+
+    # total atual de cartas no jogador
+    results = [((action, total), 1)]
+    if deck is not None:
+        # presença / ausencia de cada valor da carta no baralho
+        cardPresentIndicator = tuple([1 if x > 0 else 0 for x in deck])
+        # adicionado a nossas features
+        results.append(((action, cardPresentIndicator), 1))
+        
+        # quantidade de cartas restantes no baralho para cada valor
+        for card_idx, count in enumerate(deck):
+            results.append(((action, card_idx, count), 1))
+    
+    # indicadores da ação e as respeitivas features do estado
+    return results
     # END_YOUR_CODE
+
+# Comparação do largeMDP utilizando o blackjackFeatureExtractor
+simulate_compare_QL_VI(largeMDP, blackjackFeatureExtractor)
+# RESULTADO
+# Porcentagem de estados para as quais as ações coindicem:  
+# 67.71
